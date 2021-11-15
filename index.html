@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+      <!-- meta code for languages -->
+    <meta charset="utf-8">
+    <!-- page title -->
+    <title>Exercise</title>
+    <!-- css style file -->
+    <link rel="stylesheet" href="css/info.css">
+    <!-- bootstrap style file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <!-- start load div -->
+    <div class="load" id="load">
+      <div class="lds-hourglass"></div>
+    </div>
+    <!-- end load div -->
+    <!-- start choose page -->
+    <div class="choose text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="history">
+              <div class="front">
+                <img src="images/history.jpg" alt="">
+                <div class="info">
+                  <h3 class="text-right">اختبار التاريخ</h3>
+                  <p>عدد الاسئله : 15 اسئله</p>
+                  <p>وقت الاختبار : 7 دقائق</p>
+                </div>
+              </div>
+              <div class="back">
+                <img src="images/history2.svg" alt="">
+                <h3>ما هذا الاختبار !؟</h3>
+                <p>عباره عن اختبار مكون من 10 اسئله يختبروا معلوماتك عن التاريخ وايضا يختبروا سرعة التفكير والاجابه المنطقيه علي جميع الاسئله في اقل وقت ممكن حيث مدة الاختبار هي 5 دقائق فقط</p>
+                <p>هل انت جاهز لأداء هذا الاختبار !؟</p>
+                <button id="start-history-exam">بدء الاختبار</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="chemistry">
+              <div class="front">
+                <img src="images/chemistry.jpg" alt="">
+                <div class="info">
+                  <h3 class="text-right">اختبار الكيمياء</h3>
+                  <p>عدد الاسئله : 15 سؤال</p>
+                  <p>وقت الاختبار : 7 دقائق</p>
+                </div>
+              </div>
+              <div class="back">
+                <img src="images/chemistry2.svg" alt="">
+                <h3>ما هذا الاختبار !؟</h3>
+                <p>عباره عن اختبار مكون من 15 سؤال يختبروا معلوماتك الكيميائيه وايضا يختبروا سرعة التفكير والاجابه علي جميع الاسئله في اقل وقت ممكن حيث مدة الاختبار هي 7 دقائق فقط</p>
+                <p>هل انت جاهز لأداء هذا الاختبار !؟</p>
+                <button id="start-chemistry-exam">بدء الاختبار</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end choose page -->
+    <!-- start verify page -->
+    <div class="verify text-center" id="verify">
+      <div class="heading">
+        <h2>اختبر معلوماتك في <span id="word"></span></h2>
+        <p> <i class="far fa-question-circle"></i>عدد الاسئله : 15 سؤال</p>
+        <p> <i class="far fa-clock"></i>مدة الاختبار : 7 دقائق</p>
+      </div>
+      <div class="container">
+        <div>
+          <input type="text" placeholder="ادخل اسمك" id="type-your-name" data-input="alert1" class="checkinput">
+          <p id="input1-alert" class="alert1 alert alert-danger">This Field Can't Be Empty</p>
+        </div>
+        <div>
+          <input type="number" placeholder="ادخل عمرك" id="type-your-age" data-input="alert2" class="checkinput">
+          <p id="input2-alert" class="alert2 alert alert-danger">This Field Can't Be Empty  </p>
+        </div>
+        <button id="go-to-questions">بدء الاختبار</button>
+      </div>
+      <div class="footer">
+        Designed By <span>Ahmad Eid</span> &copy; CopyRight All Rights Reserved With Much Love
+      </div>
+    </div>
+    <!-- end verify page -->
+    <!-- start chemistry questions divs -->
+    <div class="chemistry-questions text-center" id="chemistry-questions">
+      <div class="container">
+        <h1>اختر الاجابه الصحيحه</h1>
+        <p id="chemisrty-timer"> 07 : 00 </p>
+        <div class="question ques1">
+          <div class="q q0"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c1" id="car" value=""> <span class="q0ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c1" id="" value=""> <span class="q0ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c1" id="" value=""> <span class="q0ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c1" id="" value=""> <span class="q0ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques2">
+          <div class="q q1"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c2" id="car" value=""> <span class="q1ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c2" id="" value=""> <span class="q1ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c2" id="" value=""> <span class="q1ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c2" id="" value=""> <span class="q1ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques3">
+          <div class="q q2"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c3" id="car" value=""> <span class="q2ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c3" id="" value=""> <span class="q2ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c3" id="" value=""> <span class="q2ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c3" id="" value=""> <span class="q2ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques4">
+          <div class="q q3"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c4" id="car" value=""> <span class="q3ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c4" id="" value=""> <span class="q3ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c4" id="" value=""> <span class="q3ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c4" id="" value=""> <span class="q3ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques5">
+          <div class="q q4"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c5" id="car" value=""> <span class="q4ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c5" id="" value=""> <span class="q4ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c5" id="" value=""> <span class="q4ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c5" id="" value=""> <span class="q4ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques6">
+          <div class="q q5"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c6" id="car" value=""> <span class="q5ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c6" id="" value=""> <span class="q5ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c6" id="" value=""> <span class="q5ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c6" id="" value=""> <span class="q5ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques7">
+          <div class="q q6"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c7" id="car" value=""> <span class="q6ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c7" id="" value=""> <span class="q6ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c7" id="" value=""> <span class="q6ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c7" id="" value=""> <span class="q6ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques8">
+          <div class="q q7"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c8" id="car" value=""> <span class="q7ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c8" id="" value=""> <span class="q7ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c8" id="" value=""> <span class="q7ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c8" id="" value=""> <span class="q7ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques9">
+          <div class="q q8"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c9" id="car" value=""> <span class="q8ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c9" id="" value=""> <span class="q8ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c9" id="" value=""> <span class="q8ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c9" id="" value=""> <span class="q8ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques10">
+          <div class="q q9"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c10" id="car" value=""> <span class="q9ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c10" id="" value=""> <span class="q9ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c10" id="" value=""> <span class="q9ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c10" id="" value=""> <span class="q9ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques11">
+          <div class="q q10"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c11" id="car" value=""> <span class="q10ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c11" id="" value=""> <span class="q10ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c11" id="" value=""> <span class="q10ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c11" id="" value=""> <span class="q10ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques12">
+          <div class="q q11"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c12" id="car" value=""> <span class="q11ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c12" id="" value=""> <span class="q11ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c12" id="" value=""> <span class="q11ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c12" id="" value=""> <span class="q11ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques13">
+          <div class="q q12"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c13" id="car" value=""> <span class="q12ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c13" id="" value=""> <span class="q12ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c13" id="" value=""> <span class="q12ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c13" id="" value=""> <span class="q12ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques14">
+          <div class="q q13"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c14" id="car" value=""> <span class="q13ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c14" id="" value=""> <span class="q13ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c14" id="" value=""> <span class="q13ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c14" id="" value=""> <span class="q13ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question ques15">
+          <div class="q q14"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c15" id="car" value=""> <span class="q14ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c15" id="" value=""> <span class="q14ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c15" id="" value=""> <span class="q14ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c15" id="" value=""> <span class="q14ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <button id="end-chemistry-exam">انهاء الاختبار</button>
+      </div>
+    </div>
+    <!-- end chemistry questions divs -->
+    <!-- start history questions divs -->
+    <div class="history-questions text-center" id="history-questions">
+      <div class="container">
+        <h1>اختر الاجابه الصحيحه</h1>
+        <p id="history-timer"> 07 : 00 </p>
+        <div class="question">
+          <div class="q q0"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c1" id="car" value=""> <span class="q0ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c1" id="" value=""> <span class="q0ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c1" id="" value=""> <span class="q0ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c1" id="" value=""> <span class="q0ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q1"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c2" id="car" value=""> <span class="q1ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c2" id="" value=""> <span class="q1ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c2" id="" value=""> <span class="q1ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c2" id="" value=""> <span class="q1ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q2"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c3" id="car" value=""> <span class="q2ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c3" id="" value=""> <span class="q2ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c3" id="" value=""> <span class="q2ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c3" id="" value=""> <span class="q2ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q3"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c4" id="car" value=""> <span class="q3ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c4" id="" value=""> <span class="q3ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c4" id="" value=""> <span class="q3ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c4" id="" value=""> <span class="q3ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q4"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c5" id="car" value=""> <span class="q4ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c5" id="" value=""> <span class="q4ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c5" id="" value=""> <span class="q4ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c5" id="" value=""> <span class="q4ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q5"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c6" id="car" value=""> <span class="q5ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c6" id="" value=""> <span class="q5ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c6" id="" value=""> <span class="q5ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c6" id="" value=""> <span class="q5ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q6"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c7" id="car" value=""> <span class="q6ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c7" id="" value=""> <span class="q6ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c7" id="" value=""> <span class="q6ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c7" id="" value=""> <span class="q6ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q7"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c8" id="car" value=""> <span class="q7ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c8" id="" value=""> <span class="q7ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c8" id="" value=""> <span class="q7ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c8" id="" value=""> <span class="q7ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q8"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c9" id="car" value=""> <span class="q8ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c9" id="" value=""> <span class="q8ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c9" id="" value=""> <span class="q8ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c9" id="" value=""> <span class="q8ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q9"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c10" id="car" value=""> <span class="q9ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c10" id="" value=""> <span class="q9ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c10" id="" value=""> <span class="q9ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c10" id="" value=""> <span class="q9ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q10"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c11" id="car" value=""> <span class="q10ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c11" id="" value=""> <span class="q10ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c11" id="" value=""> <span class="q10ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c11" id="" value=""> <span class="q10ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q11"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c12" id="car" value=""> <span class="q11ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c12" id="" value=""> <span class="q11ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c12" id="" value=""> <span class="q11ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c12" id="" value=""> <span class="q11ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q12"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c13" id="car" value=""> <span class="q12ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c13" id="" value=""> <span class="q12ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c13" id="" value=""> <span class="q12ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c13" id="" value=""> <span class="q12ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q13"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c14" id="car" value=""> <span class="q13ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c14" id="" value=""> <span class="q13ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c14" id="" value=""> <span class="q13ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c14" id="" value=""> <span class="q13ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div class="q q14"></div>
+          <div class="choosing">
+            <div>
+              <input type="radio" name="c15" id="car" value=""> <span class="q14ans0"></span>  
+            </div>
+            <div>
+              <input type="radio" name="c15" id="" value=""> <span class="q14ans1"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c15" id="" value=""> <span class="q14ans2"></span> 
+            </div>
+            <div>
+              <input type="radio" name="c15" id="" value=""> <span class="q14ans3"></span> 
+            </div>
+          </div>
+        </div>
+        <button id="end-history-exam">انهاء الاختبار</button>
+      </div>
+    </div>
+    <!-- end history questions divs -->
+    <!-- start good result page -->
+    <div class="good-result text-center" id="good-result">
+      <img src="images/result.svg" alt="">
+      <h1>تهانينا لك يا <span id="your-name"></span> لقد حصلت علي </h1>
+      <p class="result"><span id="your-grade"></span> / 15</p>
+      <button class="know-your-faults">اعرف اخطاءك</button>
+      <button id="try-again">اعد المحاوله</button>
+    </div>
+    <!-- end good result page -->
+    <!-- start bad result page -->
+    <div class="bad-result text-center" id="bad-result">
+      <img src="images/bad.svg" alt="">
+      <h1>نأسف لك يا <span id="your-name2"></span> لقد حصلت علي </h1>
+      <p class="result"><span id="your-grade2"></span> / 15</p>
+      <button class="know-your-faults">اعرف اخطاءك</button>
+      <button id="try-again2">اعد المحاوله</button>
+    </div>
+    <!-- end bad result page -->
+    <!-- script code for javascript -->
+    <script src="js/QuestionC.js"></script>
+    <script src="js/QuestionsH.js"></script>
+    <script src="js/info.js"></script>
+    <!-- script code for bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- script code for fontawesome -->
+    <script src="https://kit.fontawesome.com/4a349e503a.js"></script>
+  </body>
+</html>

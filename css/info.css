@@ -1,0 +1,576 @@
+/* start global rules */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  direction: rtl;
+}
+
+/* end global rules */
+/* start body rules */
+body {
+  background: url("../images/background2.png") no-repeat center center/cover;
+  position: relative;
+}
+
+/* end body rules */
+/* start loading page */
+.load {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+  padding-left: 48%;
+  padding-top: 20%;
+  display: block;
+}
+
+.load .lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.load .lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 36px solid #000;
+  border-color: #000 transparent #000 transparent;
+  -webkit-animation: lds-hourglass 1.2s infinite;
+          animation: lds-hourglass 1.2s infinite;
+}
+
+@-webkit-keyframes lds-hourglass {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    -webkit-transform: rotate(900deg);
+            transform: rotate(900deg);
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    -webkit-transform: rotate(1800deg);
+            transform: rotate(1800deg);
+  }
+}
+
+@keyframes lds-hourglass {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    -webkit-transform: rotate(900deg);
+            transform: rotate(900deg);
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    -webkit-transform: rotate(1800deg);
+            transform: rotate(1800deg);
+  }
+}
+
+/* end loading page */
+/* start choose subject section */
+.choose {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.choose .history, .choose .chemistry {
+  width: 400px;
+  margin: 0px auto 0;
+  height: 500px;
+  border-radius: 20px;
+  position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 750px) and (max-width: 992px) {
+  .choose .history, .choose .chemistry {
+    width: 350px;
+    height: 458px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  .choose .history, .choose .chemistry {
+    width: 400px;
+  }
+}
+
+@media (max-width: 750px) {
+  .choose .history, .choose .chemistry {
+    width: 70%;
+    height: 400px;
+    font-size: 15px;
+  }
+}
+
+.choose .history:hover, .choose .chemistry:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.choose .history:hover .back, .choose .chemistry:hover .back {
+  z-index: 2;
+}
+
+.choose .history .front, .choose .chemistry .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.choose .history .front img, .choose .chemistry .front img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.choose .history .front .info, .choose .chemistry .front .info {
+  padding: 20px;
+  background-color: #dbd6d6;
+  border-radius: 0 0 20px 20px;
+}
+
+.choose .history .front .info h3, .choose .chemistry .front .info h3 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.choose .history .front .info p, .choose .chemistry .front .info p {
+  text-align: right;
+  color: #5e5b5b;
+  font-weight: bold;
+  background-color: #f0ecec;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media (min-width: 750px) and (max-width: 992px) {
+  .choose .history .front, .choose .chemistry .front {
+    width: 350px;
+    font-size: 15px;
+  }
+  .choose .history .front h3, .choose .chemistry .front h3 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  .choose .history .front, .choose .chemistry .front {
+    width: 400px;
+  }
+}
+
+.choose .history .back, .choose .chemistry .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.choose .history .back img, .choose .chemistry .back img {
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+}
+
+.choose .history .back h3, .choose .chemistry .back h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.choose .history .back p, .choose .chemistry .back p {
+  color: #5e5c5c;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 750px) and (max-width: 992px) {
+  .choose .history .back p, .choose .chemistry .back p {
+    padding-bottom: 0;
+  }
+}
+
+.choose .history .back button, .choose .chemistry .back button {
+  width: 150px;
+  height: 50px;
+  font-size: 23px;
+  background-color: #30336b;
+  color: #fff;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 5px;
+  margin-bottom: 45px;
+  outline: none;
+}
+
+.choose .history .back button:hover, .choose .chemistry .back button:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  background-color: #202247;
+}
+
+@media (min-width: 750px) and (max-width: 992px) {
+  .choose .history .back, .choose .chemistry .back {
+    width: 350px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  .choose .history .back, .choose .chemistry .back {
+    width: 400px;
+  }
+}
+
+/* end choose subject section */
+/* start verify page */
+.verify {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  min-height: 100%;
+  width: 100%;
+  z-index: 999;
+  display: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.verify .heading {
+  background-color: #30336b;
+  color: #fff;
+  padding: 20px;
+}
+
+.verify .heading h2 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.verify .heading p {
+  font-weight: bold;
+}
+
+.verify .heading p i {
+  padding-left: 10px;
+}
+
+.verify .heading p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.verify input[type=text] {
+  margin-top: 70px;
+}
+
+.verify input {
+  width: 450px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  -webkit-box-shadow: 2px 2px 10px #ccc;
+          box-shadow: 2px 2px 10px #ccc;
+  border: none;
+  outline: none;
+}
+
+.verify p.alert1, .verify p.alert2 {
+  display: none;
+  font-weight: bold;
+  width: 500px;
+  margin: 0 auto 15px;
+}
+
+.verify button {
+  width: 450px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 25px;
+  padding-bottom: 4px;
+  background-color: #30336b;
+  color: #fff;
+  border: none;
+  -webkit-box-shadow: 2px 2px 5px #30336b;
+          box-shadow: 2px 2px 5px #30336b;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.verify button:focus {
+  outline: none !important;
+}
+
+.verify button:hover {
+  background-color: #fff;
+  border: 2px solid #30336b;
+  color: #202247;
+  -webkit-box-shadow: 2px 2px 10px #ccc;
+          box-shadow: 2px 2px 10px #ccc;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.verify .footer {
+  margin-top: 123px;
+  background-color: #30336b;
+  padding: 10px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.verify .footer span {
+  font-weight: bold;
+}
+
+/* end verify page */
+/* start chemistry questions divs */
+.chemistry-questions, .history-questions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100pc;
+  width: 100%;
+  z-index: 999;
+  display: none;
+}
+
+.chemistry-questions .question, .history-questions .question {
+  margin-bottom: 60px;
+}
+
+.chemistry-questions h1, .history-questions h1 {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.chemistry-questions p, .history-questions p {
+  padding: 10px;
+  -webkit-box-shadow: 2px 2px 10px #ccc;
+          box-shadow: 2px 2px 10px #ccc;
+  border-radius: 20px;
+  width: 400px;
+  margin: 5px auto 30px;
+  font-size: 20px;
+  border: 2px solid #000;
+}
+
+.chemistry-questions p:before, .history-questions p:before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f017";
+  padding: 7px;
+}
+
+.chemistry-questions .q, .history-questions .q {
+  padding: 20px;
+  font-size: 20px;
+  -webkit-box-shadow: 2px 2px 10px #ccc;
+          box-shadow: 2px 2px 10px #ccc;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 10px;
+}
+
+.chemistry-questions .choosing, .history-questions .choosing {
+  -webkit-box-shadow: 2px 2px 10px #ccc;
+          box-shadow: 2px 2px 10px #ccc;
+  border-radius: 0 0 20px 20px;
+  padding: 40px;
+  font-size: 20px;
+}
+
+.chemistry-questions .choosing div, .history-questions .choosing div {
+  display: inline-block;
+  margin: 0 20px 0 20px;
+  -webkit-box-shadow: 2px 2px 10px #ccc;
+          box-shadow: 2px 2px 10px #ccc;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #b9b9b9;
+}
+
+.chemistry-questions button, .history-questions button {
+  width: 400px;
+  height: 50px;
+  font-size: 25px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  background-color: #30336b;
+  color: #fff;
+  border: none;
+  padding-bottom: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.chemistry-questions button:focus, .history-questions button:focus {
+  outline: none;
+}
+
+.chemistry-questions button:hover, .history-questions button:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  background-color: #161835;
+}
+
+/* end chemistry questions divs */
+/* start result page */
+.good-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1e501e;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  padding-top: 50px;
+  display: none;
+}
+
+.good-result img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 10px #161212;
+          box-shadow: 2px 2px 10px #161212;
+  margin-bottom: 40px;
+}
+
+.good-result p {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 5px;
+  background-color: #032b0b;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.good-result button {
+  width: 250px;
+  height: 60px;
+  font-size: 22px;
+  border-radius: 10px;
+  background-color: #141414;
+  color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.good-result button:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.bad-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #460309;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  padding-top: 50px;
+  display: none;
+}
+
+.bad-result img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 10px #080707;
+          box-shadow: 2px 2px 10px #080707;
+  margin-bottom: 40px;
+}
+
+.bad-result p {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 5px;
+  background-color: #1d0101;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.bad-result button {
+  width: 250px;
+  height: 60px;
+  font-size: 22px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bad-result button:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+/* end result page */
+/*# sourceMappingURL=info.css.map */
